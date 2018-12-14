@@ -64,11 +64,11 @@ public class UserController {
     List<User> buildUsers() {
         List<User> users = new ArrayList<>();
 
-        User user1 = buildUser(1, "John", "Doe", "john@email.com");
-        User user2 = buildUser(2, "Jon", "Smith", "smith@email.com");
-        User user3 = buildUser(3, "Will", "Craig", "will@email.com");
-        User user4 = buildUser(4, "Sam", "Lernorad", "sam@email.com");
-        User user5 = buildUser(5, "Ross", "Doe", "ross@email.com");
+        User user1 = new User(1, "John", "Doe", "john@email.com");
+        User user2 = new User(2, "Jon", "Smith", "smith@email.com");
+        User user3 = new User(3, "Will", "Craig", "will@email.com");
+        User user4 = new User(4, "Sam", "Lernorad", "sam@email.com");
+        User user5 = new User(5, "Ross", "Doe", "ross@email.com");
 
         users.add(user1);
         users.add(user2);
@@ -79,15 +79,5 @@ public class UserController {
         return users;
 
     }
-
-    User buildUser(Integer id, String fname, String lname, String email) {
-        User user = new User();
-        user.setId(id);
-        user.setFirstName(fname);
-        user.setLastName(lname);
-        user.setEmail(email);
-        return user;
-    }
-
 
 }
